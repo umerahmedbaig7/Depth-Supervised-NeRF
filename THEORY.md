@@ -316,7 +316,7 @@ class NeRF(nn.Module):
 
 **Training iterations:**
 - 20,000 iterations (paper reports 200k for best results)
-- ~12-18 hours on single V100 GPU
+- ~6-7 hours on single V100 GPU
 
 ### 6.3 Sampling Strategy
 
@@ -370,6 +370,6 @@ lpips_val = loss_fn(img1, img2)
 
 ---
 
-**Author:** Ayan Ali  
+**Author:** Umer Ahmed Baig Mughal  
 **Course:** Machine Learning in Robotics, ITMO University  
-**Last Updated:** December 13, 2025
+**Last Updated:** March 15, 2026
