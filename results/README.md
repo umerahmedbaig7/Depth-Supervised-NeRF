@@ -356,16 +356,16 @@ NeRF-Depth-Research-Results/
 **Issues with results generation:**
 1. Check training logs in notebooks
 2. Verify GPU availability: `nvidia-smi`
-3. See [GitHub Issues](https://github.com/ayanali827/depth-supervised-nerf-notebooks/issues)
-4. Contact: ayansaleem827@gmail.com
+3. See [GitHub Issues](https://github.com/umerahmedbaig7/Depth-Supervised-NeRF)
+4. Contact: umerahmedbaig98@gmail.com
 
 **Expected timeline:**
-- Training all 4 models: 2-3 days (single GPU)
-- Evaluation + rendering: 2-3 hours
-- Total: ~3 days from start to completion
+- Training all 4 models:  4-5 Hours (single GPU)
+- Evaluation + rendering: 1-2 Hours
+- Total: ~7 hourss from start to completion
 
 ---
 
-**Last Updated:** December 13, 2025  
-**Author:** Ayan Ali  
+**Last Updated:** March 15, 2026  
+**Author:** Umer Ahmed Baig Mughal  
 **Project:** Improving NeRF Training Quality Using Depth Data
