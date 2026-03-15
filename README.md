@@ -1,47 +1,140 @@
-# Research on Improving NeRF Training Quality Using Depth Data
+<div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
+# 🧠 Research on Improving NeRF Training Quality Using Depth Data
 
+### Comparative Study of Depth Supervision Strategies for Neural Radiance Fields
 
-## 👥 **Participants**
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![CUDA](https://img.shields.io/badge/CUDA-11.8+-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](https://developer.nvidia.com/cuda-toolkit)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=for-the-badge)]()
 
-**Umer Ahmed Baig Mughal**  
-ITMO University, Faculty of Control Systems and Robotics  
-Master's Program: Robotics and Artificial Intelligence (2024-2026)  
-Email: umerahmedbaig98@gmail.com
-GitHub: [umerahmedbaig7](https://github.com/umerahmedbaig7)
+<br>
 
-**Ayan Ali**  
-ITMO University, Faculty of Control Systems and Robotics    
-Master's Program: Robotics and Artificial Intelligence (2024-2026)  
-Email: ayansaleem827@gmail.com  
-GitHub: [@ayanali827](https://github.com/ayanali827) 
+> *"Neural Radiance Fields excel at novel view synthesis but suffer from geometric ambiguity. By supervising training with depth data — as hard constraints, soft, or both — we push NeRF beyond photometric accuracy toward true geometric fidelity."*
 
-**Urwa**  
-ITMO University, Faculty of Control Systems and Robotics    
-Master's Program: Robotics and Artificial Intelligence (2024-2026)  
-Email: urwa.mughal7@gmail.com
-GitHub: [@UrwaMughal7](https://github.com/UrwaMughal7)
+<br>
+
+**Institution:** ITMO University — Faculty of Control Systems and Robotics <br>
+**Programme:** MSc Robotics and Artificial Intelligence (2024–2026) <br>
+**Course:** Machine Learning in Robotics <br>
+**Research Focus:** Depth-supervised Neural Radiance Fields
+
+</div>
 
 ---
 
-## 🎯 **Research Objective**
+## 👥 Participants
+
+<div align="center">
+
+| 👤 Researcher | 📧 Email | 🐙 GitHub |
+|:-------------:|:--------:|:---------:|
+| **Umer Ahmed Baig Mughal** | umerahmedbaig98@gmail.com | [![GitHub](https://img.shields.io/badge/-umerahmedbaig7-181717?logo=github)](https://github.com/umerahmedbaig7) |
+| **Ayan Ali** | ayansaleem827@gmail.com | [![GitHub](https://img.shields.io/badge/-ayanali827-181717?logo=github)](https://github.com/ayanali827) |
+| **Urwa** | urwa.mughal7@gmail.com | [![GitHub](https://img.shields.io/badge/-UrwaMughal7-181717?logo=github)](https://github.com/UrwaMughal7) |
+
+*ITMO University · Faculty of Control Systems and Robotics · Master's Program: Robotics and Artificial Intelligence (2024–2026)*
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [🎯 Research Objective](#-research-objective)
+- [🏆 Best Result Achieved](#-best-result-achieved)
+- [📊 Research Results](#-research-results)
+- [📋 Research Description](#-research-description)
+- [🔬 Methodology](#-methodology)
+  - [Experimental Design](#experimental-design)
+  - [Evaluation Metrics](#evaluation-metrics)
+  - [Theoretical Background](#theoretical-background)
+- [🚀 Getting Started](#-getting-started)
+- [🚀 Running Experiments](#-running-experiments)
+- [📁 Research Artifacts](#-research-artifacts)
+- [📂 Repository Structure](#-repository-structure)
+- [🐛 Troubleshooting](#-troubleshooting)
+- [📚 Citation](#-citation)
+- [🙏 Acknowledgments](#-acknowledgments)
+
+---
+
+## 🎯 Research Objective
+
+<div align="center">
 
 **Compare strategies for using depth data to improve Neural Radiance Fields (NeRF) training quality.**
+
+</div>
 
 Specifically, this research investigates:
 
 1. **Hard Constraint Strategy** - Using depth as a hard constraint for ray sampling
-2. **Soft Constraint Strategy** - Using depth as a hint in the loss function  
+2. **Soft Constraint Strategy** - Using depth as a hint in the loss function
 3. **Hybrid Approach** - Combining both strategies
 
 **Goal:** Evaluate the effectiveness of each approach on a common baseline, both individually and in hybrid schemes, assessing improvements in **geometry accuracy** and **rendering realism**.
 
 ---
 
-## 📋 **Research Description**
+## 🏆 Best Result Achieved
+
+### Hybrid Strategy
+
+<div align="center">
+
+![hybrid](https://github.com/user-attachments/assets/b67dbd45-ed02-4a8f-99b8-5ad6e18472eb)
+
+<br>
+
+![Hybrid](Analysis/validation_curves_combined.png)
+
+*__Best result achieved:__ Hybrid depth supervision strategy combining soft and hard constraints for optimal rendering quality and geometric accuracy.*
+
+</div>
+
+---
+
+## 📊 Research Results
+
+### Quantitative Comparison (Lego Scene, 20K iterations)
+
+<div align="center">
+
+| Strategy | PSNR ↑ | SSIM ↑ | MSE ↓ | MAE ↓ | Robustness |
+|:--------:|:------:|:------:|:-----:|:-----:|:----------:|
+| **Baseline** | 19.91 ± 1.60 dB | 0.658 ± 0.064 | 0.0101 ± 0.003 | 0.0477 ± 0.012 | High variance |
+| **Soft** | 20.72 ± 1.23 dB | 0.523 ± 0.068 | 0.0088 ± 0.002 | 0.0482 ± 0.008 | Poor structure |
+| **Hard** | 21.27 ± 1.06 dB | 0.686 ± 0.027 | 0.0079 ± 0.002 | 0.0393 ± 0.006 | Stable |
+| **🏆 Hybrid** | **22.32 ± 1.04 dB** | **0.778 ± 0.029** | **0.0060 ± 0.001** | **0.0318 ± 0.005** | **Most robust** |
+
+</div>
+
+### 🔑 Key Findings
+
+> 🏆 Hybrid achieves **+2.15 dB PSNR** and **+0.12 SSIM** over baseline
+
+> ⚠️ Soft paradox: Better PSNR than baseline but **worst SSIM (0.523)** — depth loss hurts structural quality
+
+> 🎯 Hybrid reduces error by **41% (MSE)** and **33% (MAE)** compared to baseline
+
+> 📊 Lowest variance: Hybrid (±1.04 dB) vs Baseline (±1.60 dB) — **35% more consistent**
+
+### Research Conclusions
+
+1. **Depth supervision improves geometric consistency** at the cost of slight RGB quality degradation
+2. **Hard constraints (guided sampling) are most effective** for geometric accuracy but hurt photometric quality
+3. **Soft constraints (loss-based) preserve RGB quality** better but provide weaker geometric improvements
+4. **Hybrid approach is recommended** for applications requiring both realistic rendering and accurate geometry (robotics, AR/VR)
+5. **Computational cost:** Depth supervision adds 10-35% training time overhead
+
+---
+
+## 📋 Research Description
 
 ### Problem Statement
 
@@ -75,13 +168,15 @@ Neural Radiance Fields (NeRF) excel at novel view synthesis but suffer from:
 
 ---
 
-## 🔬 **Methodology**
+## 🔬 Methodology
 
 ### Experimental Design
 
 We implement and compare **four training strategies** on the NeRF Synthetic dataset:
 
-#### 1. **Baseline NeRF** (No Depth)
+---
+
+#### 1️⃣ Baseline NeRF (No Depth)
 
 **Training:**
 - Standard volume rendering
@@ -92,7 +187,7 @@ We implement and compare **four training strategies** on the NeRF Synthetic data
 
 ---
 
-#### 2. **Soft Depth Supervision** (Depth as Hint)
+#### 2️⃣ Soft Depth Supervision (Depth as Hint)
 
 **Training:**
 - Add depth loss to objective: `L = L_RGB + λ_soft · ||D_pred - D_gt||²`
@@ -111,7 +206,7 @@ where w_i = T_i · α_i (accumulated weights)
 
 ---
 
-#### 3. **Hard Depth-Guided Sampling** (Depth as Constraint)
+#### 3️⃣ Hard Depth-Guided Sampling (Depth as Constraint)
 
 **Training:**
 - **Guided sampling:** 75% samples in [D_gt - ε, D_gt + ε] window
@@ -129,7 +224,7 @@ L = L_RGB + λ_hard · (L_free + L_surf)
 
 ---
 
-#### 4. **Hybrid Strategy** (Combined Approach)
+#### 4️⃣ Hybrid Strategy (Combined Approach)
 
 **Training:**
 - **Sampling:** 50% uniform + 50% depth-guided
@@ -143,11 +238,28 @@ L = L_RGB + λ_soft · L_depth_MSE + λ_hard · (L_free + L_surf)
 
 ---
 
+### Strategy Comparison at a Glance
+
+<div align="center">
+
+| Property | Baseline | Soft | Hard | Hybrid |
+|:--------:|:--------:|:----:|:----:|:------:|
+| Depth in loss | ❌ | ✅ MSE | ✅ Geometric | ✅ Both |
+| Depth in sampling | ❌ | ❌ | ✅ 75% guided | ✅ 50% guided |
+| Free-space loss | ❌ | ❌ | ✅ | ✅ |
+| Surface loss | ❌ | ❌ | ✅ | ✅ |
+| λ_soft | — | 0.01 | — | 0.01 |
+| λ_hard | — | — | 0.005 | 0.005 |
+
+</div>
+
+---
+
 ### Evaluation Metrics
 
 **Rendering Quality:**
 - **PSNR** (Peak Signal-to-Noise Ratio) - Higher is better
-- **SSIM** (Structural Similarity Index) - Higher is better  
+- **SSIM** (Structural Similarity Index) - Higher is better
 - **LPIPS** (Learned Perceptual Image Patch Similarity) - Lower is better
 
 **Geometric Accuracy:**
@@ -207,7 +319,7 @@ where T(t) = exp(-∫ σ(r(s)) ds)  (transmittance)
 
 ---
 
-## 🚀 **Getting Started**
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -217,7 +329,8 @@ where T(t) = exp(-∫ σ(r(s)) ds)  (transmittance)
 
 ### Installation Options
 
-#### Option 1: Docker (Recommended)
+<details>
+<summary>🐳 <strong>Option 1: Docker (Recommended)</strong></summary>
 
 ```bash
 # Build image
@@ -227,7 +340,10 @@ docker build -t depth-nerf .
 docker run --gpus all -p 8888:8888 -v $(pwd):/workspace depth-nerf
 ```
 
-#### Option 2: Conda Environment
+</details>
+
+<details>
+<summary>🐍 <strong>Option 2: Conda Environment</strong></summary>
 
 ```bash
 # Create environment
@@ -241,84 +357,77 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 pip install -r requirements.txt
 ```
 
-#### Option 3: Virtual Environment
+</details>
+
+<details>
+<summary>⚙️ <strong>Option 3: Virtual Environment</strong></summary>
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\\Scripts\\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+</details>
 
 ---
 
 ### Quick Start
 
-#### Step 1: Clone Repository
-
 ```bash
+# Step 1: Clone Repository
 git clone https://github.com/umerahmedbaig7/Depth-Supervised-NeRF.git
 cd Depth-Supervised-NeRF
-```
 
-#### Step 2: Install Dependencies
-
-```bash
+# Step 2: Install Dependencies
 pip install -r requirements.txt
-```
 
-#### Step 3: Verify Installation
-
-```bash
+# Step 3: Verify Installation
 python -c "import torch; print(torch.cuda.is_available())"
 # Should print: True
-```
 
-#### Step 4: Download Data
-
-```bash
-# Download NeRF Synthetic dataset
+# Step 4: Download Data
 bash download_example_data.sh
-
 # Data will be in: data/nerf_synthetic/lego/
-```
 
-#### Step 5: Launch Jupyter
-
-```bash
+# Step 5: Launch Jupyter
 jupyter notebook
 # Open http://localhost:8888
 ```
 
 ---
 
-## 🚀 **Running Experiments**
+## 🚀 Running Experiments
 
 ### Notebook Execution Pipeline
 
 ```
-00_Setup_and_Dependencies.ipynb        (Setup environment)
-  ↓
-01_Data_Loading.ipynb                  (Load NeRF Synthetic dataset)
-  ↓
-02_Core_Components.ipynb               (Define NeRF architecture)
-  ↓
-[Run ALL four experiments in parallel or sequentially]
-  ↓
-03_Baseline_NeRF.ipynb                 (Experiment 1: No depth)
-04_Soft_Depth_Supervision.ipynb        (Experiment 2: Soft constraint)
-05_Hard_Depth_Sampling.ipynb           (Experiment 3: Hard constraint)
-06_Hybrid_Strategy.ipynb               (Experiment 4: Combined)
-  ↓
-07_Comprehensive_Evaluation.ipynb      (Compare all strategies)
-  ↓
-08_Rendering_and_Visualization.ipynb   (Generate videos)
+00_Setup_and_Dependencies.ipynb        ← Setup environment
+         ↓
+01_Data_Loading.ipynb                  ← Load NeRF Synthetic dataset
+         ↓
+02_Core_Components.ipynb               ← Define NeRF architecture
+         ↓
+┌────────────────────────────────────────────────────────┐
+│    Run ALL four experiments (parallel or sequential)   │
+├──────────────────┬──────────────────┬──────────────────┤
+│ 03_Baseline      │ 04_Soft_Depth    │ 05_Hard_Depth    │
+│ _NeRF.ipynb      │ _Supervision.    │ _Sampling.ipynb  │
+│ (No depth)       │ ipynb (Soft)     │ (Hard)           │
+├──────────────────┴──────────────────┴──────────────────┤
+│            06_Hybrid_Strategy.ipynb (Combined)         │
+└─────────────────────────┬──────────────────────────────┘
+                          ↓
+         07_Comprehensive_Evaluation.ipynb  ← Compare all strategies
+                          ↓
+         08_Rendering_and_Visualization.ipynb ← Generate videos
 ```
 
 ---
 
 ### Running Individual Experiments
 
-#### Experiment 1: Baseline NeRF
+#### 1️⃣ Experiment 1: Baseline NeRF
 
 ```bash
 jupyter notebook 03_Baseline_NeRF.ipynb
@@ -328,15 +437,15 @@ jupyter notebook 03_Baseline_NeRF.ipynb
 ```
 results/baseline/
 ├── model_baseline.pth      (trained weights)
-├── psnr_history.npy       (metrics)
+├── psnr_history.npy        (metrics)
 └── loss_history.npy
 ```
 
-**Training time:** ~12-15 hours (50K iterations, V100)
+> ⏱️ **Training time:** ~12-15 hours (50K iterations, V100)
 
 ---
 
-#### Experiment 2: Soft Depth Supervision
+#### 2️⃣ Experiment 2: Soft Depth Supervision
 
 ```bash
 jupyter notebook 04_Soft_Depth_Supervision.ipynb
@@ -351,7 +460,7 @@ jupyter notebook 04_Soft_Depth_Supervision.ipynb
 
 ---
 
-#### Experiment 3: Hard Depth Sampling
+#### 3️⃣ Experiment 3: Hard Depth Sampling
 
 ```bash
 jupyter notebook 05_Hard_Depth_Sampling.ipynb
@@ -367,7 +476,7 @@ jupyter notebook 05_Hard_Depth_Sampling.ipynb
 
 ---
 
-#### Experiment 4: Hybrid Strategy
+#### 4️⃣ Experiment 4: Hybrid Strategy
 
 ```bash
 jupyter notebook 06_Hybrid_Strategy.ipynb
@@ -418,120 +527,77 @@ jupyter notebook 08_Rendering_and_Visualization.ipynb
 
 ---
 
-## 📊 **Research Results**
-
-### Quantitative Comparison (Lego Scene, 20K iterations)
-
-| Strategy   | PSNR ↑         | SSIM ↑         | MSE ↓          | MAE ↓          | Robustness    |
-|-----------|----------------|----------------|----------------|----------------|---------------|
-| **Baseline** | 19.91 ± 1.60 dB | 0.658 ± 0.064 | 0.0101 ± 0.003 | 0.0477 ± 0.012 | High variance |
-| **Soft**     | 20.72 ± 1.23 dB | 0.523 ± 0.068 | 0.0088 ± 0.002 | 0.0482 ± 0.008 | Poor structure |
-| **Hard**     | 21.27 ± 1.06 dB | 0.686 ± 0.027 | 0.0079 ± 0.002 | 0.0393 ± 0.006 | Stable        |
-| **Hybrid**   | **22.32 ± 1.04 dB** | **0.778 ± 0.029** | **0.0060 ± 0.001** | **0.0318 ± 0.005** | **Most robust** |
-
-**Key Findings:**
-- 🏆 Hybrid achieves **+2.15 dB PSNR** and **+0.12 SSIM** over baseline
-- ⚠️ Soft paradox: Better PSNR than baseline but **worst SSIM (0.523)** — depth loss hurts structural quality
-- 🎯 Hybrid reduces error by **41% (MSE)** and **33% (MAE)** compared to baseline
-- 📊 Lowest variance: Hybrid (±1.04 dB) vs Baseline (±1.60 dB) — **35% more consistent**
-
----
-
----
-
-## 🏆 **Best Result Achieved (Hybrid)**
-
-![hybrid](https://github.com/user-attachments/assets/b67dbd45-ed02-4a8f-99b8-5ad6e18472eb)
-
-
-<br>
-
-![Hybrid](Analysis/validation_curves_combined.png)
-<br>
-<em><strong>Best result achieved:</strong> Hybrid depth supervision strategy combining soft and hard constraints for optimal rendering quality and geometric accuracy.</em>
-
----
-
-### Research Conclusions
-
-1. **Depth supervision improves geometric consistency** at the cost of slight RGB quality degradation
-
-2. **Hard constraints (guided sampling) are most effective** for geometric accuracy but hurt photometric quality
-
-3. **Soft constraints (loss-based) preserve RGB quality** better but provide weaker geometric improvements
-
-4. **Hybrid approach is recommended** for applications requiring both realistic rendering and accurate geometry (robotics, AR/VR)
-
-5. **Computational cost:** Depth supervision adds 10-35% training time overhead
-
----
-
-## 📁 **Research Artifacts**
+## 📁 Research Artifacts
 
 ```
 Depth-NeRF-Research/
-├── trained_models/           ← All .pth weight files (200MB)
+│
+├── 🧠 trained_models/           ← All .pth weight files (200MB)
 │   ├── baseline.pth
 │   ├── soft.pth
 │   ├── hard.pth
 │   └── hybrid.pth
 │
-├── rendered_videos/          ← Novel view synthesis (1.2GB)
+├── 🎬 rendered_videos/          ← Novel view synthesis (1.2GB)
 │   ├── baseline.mp4
 │   ├── soft.mp4
 │   ├── hard.mp4
 │   ├── hybrid.mp4
 │   └── comparison.mp4
 │
-├── evaluation_results/       ← Metrics and plots (50MB)
+├── 📊 evaluation_results/       ← Metrics and plots (50MB)
 │   ├── psnr_comparison.png
 │   ├── ssim_comparison.png
 │   ├── depth_error_maps/
 │   └── statistical_tests.csv
 │
-├── training_logs/            ← TensorBoard logs (50MB)
+├── 📈 training_logs/            ← TensorBoard logs (50MB)
 │   └── [.tfevents files]
 │
-└── raw_data/                 ← NeRF Synthetic dataset (2.5GB)
+└── 🗄️ raw_data/                 ← NeRF Synthetic dataset (2.5GB)
     └── nerf_synthetic/
 ```
 
 ---
 
-## 📂 **Repository Structure**
+## 📂 Repository Structure
 
 ```
-depth-supervised-nerf-notebooks/
-├── README.md                               ← This file
-├── THEORY.md                               ← Detailed math/theory
-├── LICENSE                                 ← MIT License
-├── requirements.txt                        ← Python dependencies
-├── .gitignore                              ← Git exclusions
-├── Dockerfile                              ← Docker image
-├── download_example_data.sh                ← Data script
-├── hybrid.gif                              ← Existing best result animation
-├── hybrid_best.gif                         ← New best result GIF
+📦 Depth-Supervised-NeRF/
 │
-├── 00_Setup_and_Dependencies.ipynb         ← Environment setup
-├── 01_Data_Loading.ipynb                   ← Dataset loading
-├── 02_Core_Components.ipynb                ← NeRF architecture
-├── 03_Baseline_NeRF.ipynb                  ← Experiment 1
-├── 04_Soft_Depth_Supervision.ipynb         ← Experiment 2
-├── 05_Hard_Depth_Sampling.ipynb            ← Experiment 3
-├── 06_Hybrid_Strategy.ipynb                ← Experiment 4
-├── 07_Comprehensive_Evaluation.ipynb       ← Results analysis
-├── 08_Rendering_and_Visualization.ipynb    ← Video generation
+├── 📄 README.md                               ← This file
+├── 📄 THEORY.md                               ← Detailed math/theory
+├── 📄 LICENSE                                 ← MIT License
+├── 📄 requirements.txt                        ← Python dependencies
+├── 📄 .gitignore                              ← Git exclusions
+├── 🐳 Dockerfile                              ← Docker image
+├── 📄 download_example_data.sh                ← Data script
+├── 🖼️  hybrid.gif                             ← Existing best result animation
+├── 🖼️  hybrid_best.gif                        ← New best result GIF
 │
-├── Analysis/                               ← Extended analysis
+├── 📓 00_Setup_and_Dependencies.ipynb         ← Environment setup
+├── 📓 01_Data_Loading.ipynb                   ← Dataset loading
+├── 📓 02_Core_Components.ipynb                ← NeRF architecture
+├── 📓 03_Baseline_NeRF.ipynb                  ← Experiment 1
+├── 📓 04_Soft_Depth_Supervision.ipynb         ← Experiment 2
+├── 📓 05_Hard_Depth_Sampling.ipynb            ← Experiment 3
+├── 📓 06_Hybrid_Strategy.ipynb                ← Experiment 4
+├── 📓 07_Comprehensive_Evaluation.ipynb       ← Results analysis
+├── 📓 08_Rendering_and_Visualization.ipynb    ← Video generation
+│
+├── 📁 Analysis/                               ← Extended analysis
 │   ├── ablation_studies.ipynb
 │   └── hyperparameter_sweep.ipynb
 │
-├── Complete_Pipeline/                      ← Complete workflows
+├── 📁 Complete_Pipeline/                      ← Complete workflows
 │
-├── data/                                   ← Datasets (git-ignored)
+├── 📁 data/                                   ← Datasets (git-ignored)
 │   └── nerf_synthetic/lego/
 │
-└── results/                                ← Outputs (git-ignored)
+├── 📁 report/                                 ← Complete Report (git-ignored)
+│   └── Depth-Guided-NeRF/
+│
+└── 📁 results/                                ← Outputs (git-ignored)
     ├── baseline/
     ├── soft/
     ├── hard/
@@ -540,9 +606,28 @@ depth-supervised-nerf-notebooks/
 
 ---
 
-## 🐛 **Troubleshooting**
+## 🧰 Tech Stack
 
-**Issue: CUDA Out of Memory**
+<div align="center">
+
+| 🛠️ Tool | 🔖 Version | 🎯 Role |
+|:-------:|:---------:|:-------:|
+| ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | 3.8+ | Core language — all experiments, data processing, evaluation |
+| ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?logo=pytorch&logoColor=white) | 2.0+ | NeRF architecture, volume rendering, all loss functions, backprop |
+| ![CUDA](https://img.shields.io/badge/-CUDA-76B900?logo=nvidia&logoColor=white) | 11.8+ | GPU acceleration — 8GB+ VRAM required for training |
+| ![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?logo=jupyter&logoColor=white) | Any | Interactive notebook environment — 9 progressive experiment notebooks |
+| ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white) | Any | Containerised environment — recommended for reproducibility |
+| ![NumPy](https://img.shields.io/badge/-NumPy-013243?logo=numpy&logoColor=white) | ≥ 1.21 | Array operations, ray sampling, metric computation |
+| ![Matplotlib](https://img.shields.io/badge/-Matplotlib-11557C?logo=python&logoColor=white) | ≥ 3.4 | PSNR/SSIM plots, depth error maps, visual comparisons |
+
+</div>
+
+---
+
+## 🐛 Troubleshooting
+
+<details>
+<summary>💾 <strong>Issue: CUDA Out of Memory</strong></summary>
 
 ```python
 # Solution: Reduce batch size
@@ -555,7 +640,10 @@ load_synthetic_split("train", half_res=True)
 N_samples = 32  # instead of 64
 ```
 
-**Issue: Training Too Slow**
+</details>
+
+<details>
+<summary>⏱️ <strong>Issue: Training Too Slow</strong></summary>
 
 ```bash
 # Verify GPU usage
@@ -565,18 +653,25 @@ nvidia-smi  # Should show 90-100% utilization
 python -c "import torch; print(torch.cuda.is_available())"
 ```
 
-**Issue: Poor Convergence**
+</details>
+
+<details>
+<summary>📉 <strong>Issue: Poor Convergence</strong></summary>
 
 - Increase iterations: `iters = 50000`
 - Try hybrid strategy (most robust)
 - Check depth ground truth quality
 
+</details>
+
 ---
 
-## 📚 **Citation**
+## 📚 Citation 
+
+If you use this research, please cite:
 
 ```bibtex
-@misc{ali2025depthnerf,
+@misc{mughal2025depthnerf,
   title={Research on Improving NeRF Training Quality Using Depth Data},
   author={Mughal, Umer Ahmed Baig, Ali, Ayan and Urwa},
   year={2025},
@@ -597,9 +692,9 @@ python -c "import torch; print(torch.cuda.is_available())"
 }
 ```
 
+---
 
-
-## 🙏 **Acknowledgments**
+## 🙏 Acknowledgments
 
 - **ITMO University** - MSc Robotics and AI
 - **Course:** Machine Learning in Robotics
@@ -608,7 +703,15 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ---
 
-**Last Updated:** March 15, 2026  
-**Authors:** Umer Ahmed Baig Mughal ([@umerahmedbaig7](https://github.com/umerahmedbaig7)), Ayan Ali ([@ayanali827](https://github.com/ayanali827)), Urwa ([@UrwaMughal7](https://github.com/UrwaMughal7))  
-**Course:** Machine Learning in Robotics, ITMO University  
+<div align="center">
+
+**Last Updated:** March 15, 2026 <br>
+**Authors:** Umer Ahmed Baig Mughal ([@umerahmedbaig7](https://github.com/umerahmedbaig7)) · Ayan Ali ([@ayanali827](https://github.com/ayanali827)) · Urwa ([@UrwaMughal7](https://github.com/UrwaMughal7)) <br>
+**Course:** Machine Learning in Robotics, ITMO University <br>
 **Research Focus:** Depth-supervised Neural Radiance Fields
+
+<br>
+
+⭐ *If this research helped you understand depth-supervised NeRF, novel view synthesis, or geometric supervision strategies, consider giving it a star!* ⭐
+
+</div>
