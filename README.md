@@ -7,23 +7,23 @@
 
 ## 👥 **Participants**
 
+**Umer Ahmed Baig Mughal**  
+ITMO University, Faculty of Control Systems and Robotics  
+Master's Program: Robotics and Artificial Intelligence (2024-2026)  
+Email: umerahmedbaig98@gmail.com
+GitHub: [umerahmedbaig7](https://github.com/umerahmedbaig7)
+
 **Ayan Ali**  
-ITMO University, Faculty of Information Technology and Programming  
+ITMO University, Faculty of Control Systems and Robotics    
 Master's Program: Robotics and Artificial Intelligence (2024-2026)  
 Email: ayansaleem827@gmail.com  
 GitHub: [@ayanali827](https://github.com/ayanali827)
 
 **Urwa**  
-ITMO University, Faculty of Information Technology and Programming  
+ITMO University, Faculty of Control Systems and Robotics    
 Master's Program: Robotics and Artificial Intelligence (2024-2026)  
 Email: urwa.mughal7@gmail.com
 GitHub: [@UrwaMughal7](https://github.com/UrwaMughal7)
-
-**Umer Ahmed Baig Mughal**  
-ITMO University, Faculty of Information Technology and Programming  
-Master's Program: Robotics and Artificial Intelligence (2024-2026)  
-Email: umerahmedbaig98@gmail.com
-GitHub: [umerahmedbaig7](https://github.com/umerahmedbaig7)
 
 ---
 
@@ -256,8 +256,8 @@ pip install -r requirements.txt
 #### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/ayanali827/depth-supervised-nerf-notebooks.git
-cd depth-supervised-nerf-notebooks
+git clone https://github.com/umerahmedbaig7/Depth-Supervised-NeRF.git
+cd Depth-Supervised-NeRF
 ```
 
 #### Step 2: Install Dependencies
@@ -578,11 +578,11 @@ python -c "import torch; print(torch.cuda.is_available())"
 ```bibtex
 @misc{ali2025depthnerf,
   title={Research on Improving NeRF Training Quality Using Depth Data},
-  author={Ali, Ayan and Mughal, Umer Ahmed Baig and Urwa},
+  author={Mughal, Umer Ahmed Baig, Ali, Ayan and Urwa},
   year={2025},
   institution={ITMO University},
   note={Comparative study of depth supervision strategies for Neural Radiance Fields},
-  howpublished={\url{https://github.com/ayanali827/depth-supervised-nerf-notebooks}}
+  howpublished={\url{https://github.com/umerahmedbaig7/Depth-Supervised-NeRF}}
 }
 ```
 
@@ -601,14 +601,14 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ## 🙏 **Acknowledgments**
 
-- **ITMO University** - Robotics and AI Master's Program
+- **ITMO University** - MSc Robotics and AI
 - **Course:** Machine Learning in Robotics
 - **Original NeRF** - Mildenhall et al., ECCV 2020
 - **NeRF Synthetic Dataset** - Authors of NeRF paper
 
 ---
 
-**Last Updated:** December 14, 2025  
-**Authors:** Ayan Ali ([@ayanali827](https://github.com/ayanali827)), Umer Ahmed Baig Mughal ([@umerahmedbaig7](https://github.com/umerahmedbaig7)), Urwa ([@UrwaMughal7](https://github.com/UrwaMughal7))  
+**Last Updated:** March 15, 2026  
+**Authors:** Umer Ahmed Baig Mughal ([@umerahmedbaig7](https://github.com/umerahmedbaig7)), Ayan Ali ([@ayanali827](https://github.com/ayanali827)), Urwa ([@UrwaMughal7](https://github.com/UrwaMughal7))  
 **Course:** Machine Learning in Robotics, ITMO University  
 **Research Focus:** Depth-supervised Neural Radiance Fields
