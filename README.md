@@ -2,7 +2,7 @@
 
 # 🧠 Research on Improving NeRF Training Quality Using Depth Data
 
-### Comparative Study of Depth Supervision Strategies for Neural Radiance Fields
+### Comparative Study of Depth Supervision Strategies for Neural Radiance Fields 
 
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
