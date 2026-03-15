@@ -25,7 +25,7 @@ This directory contains the **all-in-one complete pipeline notebook** that combi
 3. Does hybrid approach outperform individual strategies?
 
 ### Technical Specifications:
-- **Execution Time:** ~60-70 hours (for all 4 experiments)
+- **Execution Time:** ~6-7 hours (for all 4 experiments)
 - **GPU Required:** NVIDIA GPU with 8GB+ VRAM (V100, RTX 3080, or better)
 - **Memory:** 16GB+ RAM recommended
 - **Storage:** 10GB+ for data and results
@@ -42,7 +42,7 @@ This directory contains the **all-in-one complete pipeline notebook** that combi
 2. Runtime → Change runtime type → GPU (T4)
 3. Run cells sequentially
 
-**Note:** Colab free tier has 12-hour session limits. Save intermediate results to Google Drive!
+**Note:** Colab free tier has 4-hour session limits. Save intermediate results to Google Drive!
 
 ---
 
@@ -89,22 +89,22 @@ jupyter notebook Complete_NeRF_Depth_Supervision_Pipeline.ipynb
 - Ray generation and volume rendering
 - Utility functions
 
-### Section 4: Experiment 1 - Baseline (12-15 hours)
+### Section 4: Experiment 1 - Baseline (1-2 hours)
 - Vanilla NeRF training (RGB loss only)
 - No depth supervision
 - Establishes performance baseline
 
-### Section 5: Experiment 2 - Soft Depth (13-15 hours)
+### Section 5: Experiment 2 - Soft Depth (1-2 hours)
 - Add MSE depth loss to objective
 - Soft constraint on expected depth
 - Compare to baseline
 
-### Section 6: Experiment 3 - Hard Depth (15-18 hours)
+### Section 6: Experiment 3 - Hard Depth (1-2 hours)
 - Depth-guided ray sampling
 - Free-space and surface concentration losses
 - Hard geometric constraints
 
-### Section 7: Experiment 4 - Hybrid (15-18 hours)
+### Section 7: Experiment 4 - Hybrid (1-2 hours)
 - Combine soft and hard strategies
 - Balanced sampling + dual loss
 - Best overall performance
@@ -136,10 +136,10 @@ After running the complete pipeline, you will obtain:
 
 | Strategy | PSNR ↑ | SSIM ↑ | LPIPS ↓ | Depth L1 ↓ | Training Time |
 |----------|--------|--------|---------|-----------|---------------|
-| Baseline | ~22.5 dB | ~0.90 | ~0.085 | N/A | 12-15 hours |
-| Soft | ~22.4 dB | ~0.90 | ~0.089 | ~0.34 m | 13-15 hours |
-| Hard | ~22.0 dB | ~0.90 | ~0.098 | ~0.28 m | 15-18 hours |
-| Hybrid | ~22.1 dB | ~0.90 | ~0.092 | ~0.31 m | 15-18 hours |
+| Baseline | ~22.5 dB | ~0.90 | ~0.085 | N/A | 1-2 hours |
+| Soft | ~22.4 dB | ~0.90 | ~0.089 | ~0.34 m | 1-2 hours |
+| Hard | ~22.0 dB | ~0.90 | ~0.098 | ~0.28 m | 1-2 hours |
+| Hybrid | ~22.1 dB | ~0.90 | ~0.092 | ~0.31 m | 1-2 hours |
 
 *Note: Results may vary ±1-2 dB depending on random seed and training duration*
 
@@ -156,7 +156,7 @@ After running the complete pipeline, you will obtain:
 ### For First-Time Users:
 
 1. **Run sequentially** - Execute cells from top to bottom
-2. **Expect long runtime** - Plan for 60-70 hours total
+2. **Expect long runtime** - Plan for 6-7 hours total
 3. **Save frequently** - Download intermediate checkpoints
 4. **Monitor GPU** - Check utilization with `nvidia-smi`
 
@@ -293,12 +293,12 @@ For more control and easier debugging, use individual notebooks:
 If you use this implementation in your research:
 
 ```bibtex
-@misc{ali2025depthnerf,
+@misc{Mughal2025depthnerf,
   title={Research on Improving NeRF Training Quality Using Depth Data},
-  author={Ali, Ayan},
+  author={Mughal, Umer Ahmed Baig},
   year={2025},
   institution={ITMO University},
-  howpublished={\url{https://github.com/ayanali827/depth-supervised-nerf-notebooks}}
+  howpublished={\url{https://github.com/umerahmedbaig7/Depth-Supervised-NeRF}}
 }
 ```
 
