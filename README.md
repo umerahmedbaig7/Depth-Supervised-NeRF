@@ -17,7 +17,7 @@ GitHub: [umerahmedbaig7](https://github.com/umerahmedbaig7)
 ITMO University, Faculty of Control Systems and Robotics    
 Master's Program: Robotics and Artificial Intelligence (2024-2026)  
 Email: ayansaleem827@gmail.com  
-GitHub: [@ayanali827](https://github.com/ayanali827)
+GitHub: [@ayanali827](https://github.com/ayanali827) 
 
 **Urwa**  
 ITMO University, Faculty of Control Systems and Robotics    
