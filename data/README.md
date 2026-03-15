@@ -278,7 +278,7 @@ data/llff/
 ## ℹ️ **Need Help?**
 
 **Issues with data download:**
-1. Check [GitHub Issues](https://github.com/umerahmedbaig7/Depth-Supervised-NeRF/issues)
+1. Check [GitHub Issues](https://github.com/umerahmedbaig7/Depth-Supervised-NeRF)
 2. Contact: umerahmedbaig98@gmail.com
 3. See original NeRF repo: https://github.com/bmild/nerf
 
