@@ -444,12 +444,11 @@ jupyter notebook 08_Rendering_and_Visualization.ipynb
 ![hybrid](https://github.com/user-attachments/assets/b67dbd45-ed02-4a8f-99b8-5ad6e18472eb)
 
 
+<br>
 
-<p align="center">
-  <img src="hybrid_best_result.jpg" alt="Hybrid Depth-Supervised NeRF - Best Result" width="700"/>
-  <br>
-  <em><strong>Best result achieved:</strong> Hybrid depth supervision strategy combining soft and hard constraints for optimal rendering quality and geometric accuracy.</em>
-</p>
+![Hybrid](Analysis/validation_curves_combined.png)
+<br>
+<em><strong>Best result achieved:</strong> Hybrid depth supervision strategy combining soft and hard constraints for optimal rendering quality and geometric accuracy.</em>
 
 ---
 
