@@ -9,7 +9,7 @@
 7. [Experiment 4: Hybrid Strategy](#hybrid)
 8. [Comprehensive Evaluation](#evaluation)
 9. [Rendering & Visualization](#rendering)
-10. [Results Summary](#summary)
+10. [Results Summary](#summary) 
 
 ---
 
