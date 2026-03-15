@@ -278,8 +278,8 @@ data/llff/
 ## ℹ️ **Need Help?**
 
 **Issues with data download:**
-1. Check [GitHub Issues](https://github.com/ayanali827/depth-supervised-nerf-notebooks/issues)
-2. Contact: ayansaleem827@gmail.com
+1. Check [GitHub Issues](https://github.com/umerahmedbaig7/Depth-Supervised-NeRF/issues)
+2. Contact: umerahmedbaig98@gmail.com
 3. See original NeRF repo: https://github.com/bmild/nerf
 
 **Alternative download methods:**
@@ -289,6 +289,6 @@ data/llff/
 
 ---
 
-**Last Updated:** December 13, 2025  
-**Maintained by:** Ayan Ali  
+**Last Updated:** March 15, 2026  
+**Maintained by:** Umer Ahmed Baig Mughal  
 **Dataset Source:** [NeRF: Neural Radiance Fields](https://www.matthewtancik.com/nerf)
