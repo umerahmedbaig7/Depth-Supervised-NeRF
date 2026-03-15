@@ -7,7 +7,7 @@ This document provides detailed theoretical explanations of the depth supervisio
 ## Table of Contents
 
 1. [Neural Radiance Fields (NeRF) Foundations](#nerf-foundations)
-2. [Volume Rendering](#volume-rendering)
+2. [Volume Rendering](#volume-rendering) 
 3. [Depth Supervision Strategies](#depth-supervision-strategies)
 4. [Loss Functions](#loss-functions)
 5. [Mathematical Derivations](#mathematical-derivations)
