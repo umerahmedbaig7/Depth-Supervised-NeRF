@@ -82,24 +82,24 @@ results/
 ```bash
 # From repository root
 
-# Experiment 1: Baseline (12-15 hours)
+# Experiment 1: Baseline (1-2 hours)
 jupyter notebook 03_Baseline_NeRF.ipynb
 # → Creates results/baseline/model_baseline.pth
 
-# Experiment 2: Soft Depth (13-15 hours)
+# Experiment 2: Soft Depth (1-2 hours)
 jupyter notebook 04_Soft_Depth_Supervision.ipynb
 # → Creates results/soft/model_soft.pth
 
-# Experiment 3: Hard Depth (15-18 hours)
+# Experiment 3: Hard Depth (1-2 hours)
 jupyter notebook 05_Hard_Depth_Sampling.ipynb
 # → Creates results/hard/model_hard.pth
 
-# Experiment 4: Hybrid (15-18 hours)
+# Experiment 4: Hybrid (1-2 hours)
 jupyter notebook 06_Hybrid_Strategy.ipynb
 # → Creates results/hybrid/model_hybrid.pth
 ```
 
-**Total training time:** 55-66 hours (2-3 days on single GPU)
+**Total training time:** 6-7 hours (~7 hours on single GPU)
 
 **Tip:** Run in parallel on multiple GPUs if available
 
@@ -360,9 +360,9 @@ NeRF-Depth-Research-Results/
 4. Contact: umerahmedbaig98@gmail.com
 
 **Expected timeline:**
-- Training all 4 models:  4-5 Hours (single GPU)
+- Training all 4 models:  6-7 Hours (single GPU)
 - Evaluation + rendering: 1-2 Hours
-- Total: ~7 hourss from start to completion
+- Total: ~10 hours from start to completion
 
 ---
 
